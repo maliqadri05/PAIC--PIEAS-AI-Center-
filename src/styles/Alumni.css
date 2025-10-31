@@ -1,0 +1,54 @@
+.alumni {
+  padding: 4rem 2rem;
+  background: #FFF5F5;
+  min-height: calc(100vh - 80px);
+}
+
+.alumni-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.alumni h1 {
+  text-align: center;
+  color: #8B0000;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.alumni-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.alumni-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s;
+  border-top: 3px solid #DC143C;
+}
+
+.alumni-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(139, 0, 0, 0.2);
+}
+
+.alumni-card h3 {
+  color: #8B0000;
+  margin-bottom: 0.5rem;
+}
+
+.alumni-lab {
+  color: #DC143C;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.alumni-year {
+  color: #666;
+  font-size: 0.85rem;
+}
