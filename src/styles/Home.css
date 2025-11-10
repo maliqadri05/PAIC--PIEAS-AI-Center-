@@ -1,53 +1,109 @@
 .home {
-  min-height: calc(100vh - 80px);
-  background: linear-gradient(135deg, #8B0000 0%, #B22222 50%, #DC143C 100%);
-  padding: 4rem 2rem;
+  position: relative;
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .home-container {
-  max-width: 1200px;
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
   margin: 0 auto;
+}
+
+.home-header {
   text-align: center;
+  margin-bottom: 4rem;
+}
+
+.home-title {
+  font-size: 4.5rem;
+  font-weight: bold;
   color: white;
-}
-
-.home h1 {
-  font-size: 3rem;
   margin-bottom: 1rem;
-  text-shadow: 3px 3px 6px rgba(0,0,0,0.4);
-  animation: fadeInDown 1s ease-in;
 }
 
-.home h2 {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  color: #FFD700;
+.home-subtitle {
+  font-size: 2rem;
+  color: #fcd34d;
+  font-weight: 300;
 }
 
-.home-content {
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.home-card {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 2.5rem;
-  border-radius: 15px;
-  margin-top: 3rem;
-  text-align: left;
+  backdrop-filter: blur(12px);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.5s;
+}
+
+.hover-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.card-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.card-description {
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+.home-vision {
+  margin-top: 4rem;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  padding: 3rem;
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.home-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
+.home-vision h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
   margin-bottom: 1.5rem;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+.home-vision p {
+  color: #e5e7eb;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.home-vision p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2.5rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .home-subtitle {
+    font-size: 1.25rem;
   }
 }

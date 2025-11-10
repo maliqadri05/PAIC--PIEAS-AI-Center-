@@ -1,26 +1,37 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import '../styles/Navbar.css';
 
-const Navbar = () => {
-  const location = useLocation();
-  const getPath = (page) => page === 'Home' ? '/' : `/${page.toLowerCase()}`;
+const Navbar = ({ currentPage, setCurrentPage }) => {
+  const [scrolled, setScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  const navItems = ['Home', 'Labs', 'Projects', 'Alumni', 'Contact'];
   
   return (
-    <nav className="navbar">
-      <div className="nav-brand">
-        <Link to="/">PAIC</Link>
-      </div>
-      <div className="nav-links">
-        {['Home', 'Labs', 'Projects', 'Alumni', 'Contact'].map(page => (
-          <Link
-            key={page}
-            to={getPath(page)}
-            className={`nav-link ${location.pathname === getPath(page) ? 'active' : ''}`}
-          >
-            {page}
-          </Link>
-        ))}
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="nav-container">
+        <button
+          onClick={() => setCurrentPage('Home')}
+          className="nav-logo"
+        >
+          PAIC
+        </button>
+        <div className="nav-menu">
+          {navItems.map(item => (
+            <button
+              key={item}
+              onClick={() => setCurrentPage(item)}
+              className={`nav-link ${currentPage === item ? 'active' : ''}`}
+            >
+              {item}
+            </button>
+          ))}
+        </div>
       </div>
     </nav>
   );

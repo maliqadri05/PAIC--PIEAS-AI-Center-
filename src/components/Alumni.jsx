@@ -1,4 +1,5 @@
 import React from 'react';
+import { Starfield } from '../App';
 import '../styles/Alumni.css';
 
 const Alumni = () => {
@@ -18,21 +19,31 @@ const Alumni = () => {
   ];
   
   return (
-    <section className="alumni-section">
-      {/* Section title */}
-      <h2>Our Distinguished Alumni</h2>
-      {/* Loop over each alumni and display their info */}
-      <div className="alumni-list">
-        {alumni.map((person, index) => (
-          // Each alumnus is shown inside a div
-          <div className="alumni-card" key={index}>
-            <div className="alumni-name">{person.name}</div>
-            <div className="alumni-lab">{person.lab}</div>
-            <div className="alumni-year">Graduated: {person.year}</div>
-          </div>
-        ))}
+    <div className="alumni">
+      <Starfield />
+      <div className="alumni-container">
+        <h1 className="alumni-title animate-fadeIn">
+          Our Distinguished Alumni
+        </h1>
+        
+        <div className="alumni-grid">
+          {alumni.map((person, index) => (
+            <div
+              key={index}
+              className="alumni-card animate-fadeIn"
+              style={{ animationDelay: `${index * 0.05}s` }}
+            >
+              <div className="alumni-avatar">
+                {person.name.split(' ').map(n => n[0]).join('')}
+              </div>
+              <h3 className="alumni-name">{person.name}</h3>
+              <p className="alumni-lab">{person.lab}</p>
+              <p className="alumni-year">Class of {person.year}</p>
+            </div>
+          ))}
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
