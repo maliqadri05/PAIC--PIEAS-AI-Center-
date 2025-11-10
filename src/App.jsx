@@ -5,7 +5,7 @@ import Labs from './components/Labs';
 import Projects from './components/Projects';
 import Alumni from './components/Alumni';
 import Contact from './components/Contact';
-import './styles/App.css';
+import './App.css';
 
 // Starfield Background Component
 export const Starfield = () => {
