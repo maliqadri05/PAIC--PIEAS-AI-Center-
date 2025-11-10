@@ -15,12 +15,12 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <button
-          onClick={() => setCurrentPage('Home')}
-          className="nav-logo"
-        >
-          PAIC
-        </button>
+        <div className="nav-brand" onClick={() => setCurrentPage('Home')}
+             role="button" tabIndex={0} aria-label="Go to Home">
+          {/* Brand image (place the provided image at /paic-logo.png in the project root or public folder) */}
+          <img src="/paic-logo.png" alt="PAIC logo" className="nav-logo-img" />
+          <span className="nav-title">PAIC</span>
+        </div>
         <div className="nav-menu">
           {navItems.map(item => (
             <button

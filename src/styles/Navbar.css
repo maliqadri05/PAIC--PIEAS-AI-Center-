@@ -2,14 +2,19 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(to right, rgba(127, 29, 29, 0.8), rgba(185, 28, 28, 0.8));
-  backdrop-filter: blur(10px);
-  transition: all 0.3s;
+  /* Transparent / glass look */
+  background: transparent;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: background 0.3s, box-shadow 0.3s;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
 .navbar.scrolled {
-  background: linear-gradient(to right, #7f1d1d, #b91c1c);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  /* Slight translucent background when scrolled */
+  background: rgba(16, 16, 16, 0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 .nav-container {
@@ -24,16 +29,16 @@
 .nav-logo {
   font-size: 1.875rem;
   font-weight: bold;
-  color: white;
+  color: rgba(255,255,255,0.92);
   background: none;
   border: none;
   cursor: pointer;
   letter-spacing: 2px;
-  transition: color 0.3s;
+  transition: color 0.2s ease;
 }
 
 .nav-logo:hover {
-  color: #fcd34d;
+  color: #ffd966;
 }
 
 .nav-menu {
@@ -41,25 +46,52 @@
   gap: 2rem;
 }
 
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+}
+
+.nav-logo-img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.35);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.0));
+}
+
+.nav-title {
+  color: rgba(255,255,255,0.94);
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  font-size: 1.05rem;
+}
+
 .nav-link {
-  color: white;
-  background: none;
+  color: rgba(255,255,255,0.88);
+  background: transparent;
   border: none;
   cursor: pointer;
-  font-weight: 500;
-  font-size: 1rem;
-  padding: 0.5rem 0;
+  font-weight: 600;
+  font-size: 0.98rem;
+  padding: 0.5rem 0.25rem;
   border-bottom: 2px solid transparent;
-  transition: all 0.3s;
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
   font-family: inherit;
 }
 
 .nav-link:hover {
-  color: #fcd34d;
-  border-bottom: 2px solid #fcd34d;
+  color: var(--text);
+  border-bottom: 2px solid rgba(212,58,42,0.18);
+  background: rgba(212,58,42,0.06);
+  border-radius: 4px;
 }
 
 .nav-link.active {
-  color: #fcd34d;
-  border-bottom: 2px solid #fcd34d;
+  color: var(--text);
+  border-bottom: 2px solid var(--accent-red);
+  background: rgba(212,58,42,0.08);
+  border-radius: 4px;
 }

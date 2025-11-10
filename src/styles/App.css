@@ -1,8 +1,22 @@
-.app {
-  min-height: 100vh;
-  background: linear-gradient(to bottom right, #111827, #7f1d1d, #111827);
+:root {
+  --bg-dark-1: #07060a;
+  --bg-dark-2: #1b0b0b;
+  --accent-red: #d43a2a;
+  --text: #ffffff;
+  --card-bg: rgba(255,255,255,0.04);
+  --card-border: rgba(255,255,255,0.06);
+  --muted: rgba(255,255,255,0.85);
 }
 
+/* Global app background: deep black -> dark red gradient */
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-dark-1) 0%, var(--bg-dark-2) 50%, rgba(164,18,18,0.72) 100%);
+  color: var(--text);
+}
+
+/* stars (subtle white dots) */
+/* stars (subtle white dots) */
 .starfield {
   position: fixed;
   inset: 0;
@@ -13,6 +27,13 @@
 
 .star {
   position: absolute;
-  background: white;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 0 6px rgba(255,255,255,0.12);
   border-radius: 50%;
 }
+
+.animate-twinkle { animation-name: twinkle; animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+@keyframes twinkle { 0%,100%{opacity:0.18;transform:scale(1);}50%{opacity:1;transform:scale(1.4);} }
+
+/* make main content appear above starfield */
+main { position: relative; z-index: 10; }

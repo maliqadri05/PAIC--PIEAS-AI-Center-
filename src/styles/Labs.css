@@ -5,7 +5,7 @@
   padding-bottom: 4rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background: linear-gradient(to bottom right, #111827, #7f1d1d, #111827);
+  background: transparent;
 }
 
 .labs-container {
@@ -31,19 +31,19 @@
 
 .lab-card {
   position: relative;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255,255,255,0.06);
   overflow: hidden;
-  transition: all 0.5s;
+  transition: all 0.35s ease;
   cursor: pointer;
 }
 
 .lab-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
 }
 
 .lab-content {

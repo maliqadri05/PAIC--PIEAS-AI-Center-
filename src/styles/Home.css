@@ -22,13 +22,13 @@
 .home-title {
   font-size: 4.5rem;
   font-weight: bold;
-  color: white;
+  color: var(--text, #ffffff);
   margin-bottom: 1rem;
 }
 
 .home-subtitle {
   font-size: 2rem;
-  color: #fcd34d;
+  color: rgba(255,255,255,0.9);
   font-weight: 300;
 }
 
@@ -49,7 +49,7 @@
 }
 
 .hover-card:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255,255,255,0.03);
   transform: scale(1.05);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 }
@@ -62,12 +62,12 @@
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: var(--text, #ffffff);
   margin-bottom: 1rem;
 }
 
 .card-description {
-  color: #e5e7eb;
+  color: rgba(255,255,255,0.85);
   line-height: 1.7;
 }
 

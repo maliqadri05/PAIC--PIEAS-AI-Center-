@@ -5,7 +5,7 @@
   padding-bottom: 4rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background: linear-gradient(to bottom right, #111827, #581c87, #111827);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .projects-container {
@@ -30,19 +30,19 @@
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(10px);
   border-radius: 1rem;
   padding: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.5s;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.35s ease;
   cursor: pointer;
 }
 
 .project-card:hover {
-  background: rgba(255, 255, 255, 0.15);
-  transform: scale(1.02);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(255,255,255,0.04);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 .project-content {
@@ -63,24 +63,24 @@
 .project-title {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 
 .project-lab {
-  color: #fcd34d;
+  color: #ffd34d;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
 
 .project-description {
-  color: #e5e7eb;
+  color: rgba(255,255,255,0.9);
   margin-bottom: 1rem;
   line-height: 1.7;
 }
 
 .project-team {
-  color: #d1d5db;
+  color: rgba(255,255,255,0.85);
 }
 
 .team-label {

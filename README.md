@@ -1,33 +1,20 @@
-# PAIC - PIEAS Artificial Intelligence Center
+<<<<<<< HEAD
+# React + Vite
 
-Official website for the PIEAS Artificial Intelligence Center (PAIC).
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Technology Stack
+Currently, two official plugins are available:
 
-This project is built with:
-- React 18
-- Vite
-- React Router DOM
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Development
+## React Compiler
 
-This project uses Vite for fast development with HMR (Hot Module Replacement) and optimized builds.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-### Available Scripts
+## Expanding the ESLint configuration
 
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-
-## Project Structure
-
-```
-paic-website/
-├── src/
-│   ├── components/     # React components
-│   ├── styles/        # CSS styles
-│   ├── assets/        # Static assets
-│   ├── App.jsx        # Main App component
-│   └── main.jsx       # Entry point
-└── public/            # Public assets
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+=======
+# PAIC--PIEAS-AI-Center-
+>>>>>>> cb892e009bb6982d57333e890fd0ad27a163c0ea
