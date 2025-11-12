@@ -50,7 +50,7 @@ function App() {
   const renderPage = () => {
     switch (currentPage) {
       case 'Home':
-        return <Home />;
+    return <Home setCurrentPage={setCurrentPage} />;
       case 'Labs':
         return <Labs />;
       case 'Projects':
