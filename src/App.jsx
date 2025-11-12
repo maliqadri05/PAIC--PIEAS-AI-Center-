@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Labs from './components/Labs';
-import Projects from './components/Projects';
 import Alumni from './components/Alumni';
 import Contact from './components/Contact';
+import LabProjects from './components/LabProjects';
+import LabDetails from './components/LabDetails';
 import './styles/App.css';
 
 // Starfield Background Component
@@ -45,30 +47,18 @@ export const Starfield = () => {
 };
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
-  
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'Home':
-    return <Home setCurrentPage={setCurrentPage} />;
-      case 'Labs':
-        return <Labs />;
-      case 'Projects':
-        return <Projects />;
-      case 'Alumni':
-        return <Alumni />;
-      case 'Contact':
-        return <Contact />;
-      default:
-        return <Home />;
-    }
-  };
-  
   return (
     <div className="app">
-      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Navbar />
       <main>
-        {renderPage()}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/labs" element={<Labs />} />
+          <Route path="/labs/:labName/details" element={<LabDetails />} />
+          <Route path="/labs/:labName/projects" element={<LabProjects />} />
+          <Route path="/alumni" element={<Alumni />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
       </main>
     </div>
   );

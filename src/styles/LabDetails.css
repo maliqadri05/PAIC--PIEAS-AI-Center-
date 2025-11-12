@@ -1,0 +1,279 @@
+:root {
+  --bg-gradient: linear-gradient(180deg, #0b0710 0%, #1a0b0b 50%, #2b0000 100%);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --accent: #ff3b3b;
+  --accent-gradient: linear-gradient(90deg, #ff3b3b, #d43a2a);
+  --muted: rgba(255, 255, 255, 0.7);
+  --white: #ffffff;
+}
+
+h2 {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lab-details-container {
+  min-height: 100vh;
+  background: var(--bg-gradient);
+  color: var(--white);
+  position: relative;
+}
+
+.lab-details-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem 2rem;
+  position: relative;
+  z-index: 10;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.35s ease;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.4);
+  transform: translateX(-4px);
+}
+
+.lab-details-header {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.lab-details-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.lab-icon {
+  font-size: 2.8rem;
+  display: inline-block;
+}
+
+.lab-info-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s ease;
+}
+
+.lab-info-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.3), 0 12px 40px rgba(0, 0, 0, 0.7);
+  transform: translateY(-4px);
+}
+
+.lab-info-card h2 {
+  font-size: 1.6rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.lab-head-info {
+  font-size: 1rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.lab-head-info strong {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.lab-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+.resources-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.resource-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 59, 59, 0.2);
+  transition: all 0.3s ease;
+}
+
+.resource-item:hover {
+  background: rgba(255, 59, 59, 0.1);
+  border-color: rgba(255, 59, 59, 0.4);
+  transform: translateX(4px);
+}
+
+.resource-icon {
+  font-size: 1.2rem;
+  min-width: 1.5rem;
+}
+
+.resource-item span:last-child {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.faculty-section {
+  margin: 3rem 0;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.faculty-info-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+.faculty-info-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5), 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.faculty-avatar {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, rgba(255, 59, 59, 0.3), rgba(255, 59, 59, 0.1));
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.faculty-name {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--white);
+}
+
+.faculty-title {
+  font-size: 0.9rem;
+  color: var(--accent);
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.faculty-specialty {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.projects-section {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+.projects-section:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.3), 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.view-projects-btn {
+  background: linear-gradient(135deg, rgba(255, 59, 59, 0.2), rgba(255, 59, 59, 0.1));
+  border: 2px solid var(--accent);
+  color: var(--white);
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.35s ease;
+  letter-spacing: 0.5px;
+}
+
+.view-projects-btn:hover {
+  background: rgba(255, 59, 59, 0.3);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-details-content {
+    padding: 4rem 1rem 2rem;
+  }
+
+  .lab-details-title {
+    font-size: 1.8rem;
+  }
+
+  .lab-icon {
+    font-size: 2rem;
+  }
+
+  .lab-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-info-card {
+    padding: 1.5rem;
+  }
+}

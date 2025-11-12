@@ -1,3 +1,20 @@
+:root {
+  --bg-gradient: linear-gradient(180deg, #0b0710 0%, #1a0b0b 50%, #2b0000 100%);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --accent: #ff3b3b;
+  --accent-gradient: linear-gradient(90deg, #ff3b3b, #d43a2a);
+  --muted: rgba(255, 255, 255, 0.7);
+  --white: #ffffff;
+}
+
+h2 {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .labs {
   position: relative;
   min-height: 100vh;
@@ -5,7 +22,7 @@
   padding-bottom: 4rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-  background: transparent;
+  background: var(--bg-gradient);
 }
 
 .labs-container {
@@ -16,34 +33,35 @@
 }
 
 .labs-title {
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: bold;
   text-align: center;
-  color: white;
-  margin-bottom: 4rem;
+  color: var(--white);
+  margin-bottom: 2rem;
 }
 
 .labs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .lab-card {
   position: relative;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  padding: 2rem;
-  border: 1px solid rgba(255,255,255,0.06);
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.6rem;
   overflow: hidden;
   transition: all 0.35s ease;
   cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
 .lab-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.55);
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5), 0 12px 40px rgba(0, 0, 0, 0.7);
 }
 
 .lab-content {
@@ -52,20 +70,21 @@
 }
 
 .lab-icon {
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
 }
 
 .lab-name {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: white;
+  color: var(--white);
   margin-bottom: 0.75rem;
 }
 
 .lab-head {
-  color: #fcd34d;
+  color: var(--muted);
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {

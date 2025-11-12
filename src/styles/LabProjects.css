@@ -1,0 +1,104 @@
+:root {
+  --bg-gradient: linear-gradient(180deg, #0b0710 0%, #1a0b0b 50%, #2b0000 100%);
+  --card-bg: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.06);
+  --accent: #ff3b3b;
+  --accent-gradient: linear-gradient(90deg, #ff3b3b, #d43a2a);
+  --muted: rgba(255, 255, 255, 0.7);
+  --white: #ffffff;
+}
+
+h2 {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lab-projects {
+  min-height: 100vh;
+  padding: 7rem 1.5rem 2rem 1.5rem;
+  background: var(--bg-gradient);
+  color: var(--white);
+}
+
+.back-btn {
+  display: inline-block;
+  margin-bottom: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.35s ease;
+  white-space: nowrap;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: var(--accent);
+  box-shadow: 0 0 15px rgba(255, 59, 59, 0.4);
+  transform: translateX(-4px);
+}
+
+.lab-projects-header {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.lab-projects-title {
+  font-size: 2.6rem;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.lab-projects-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: rgba(0, 0, 0, 0.45);
+  border: 2px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.6rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  width: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5), 0 12px 40px rgba(0, 0, 0, 0.7);
+}
+
+.project-title {
+  font-size: 1.3rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--white);
+}
+
+.project-description {
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.project-supervisor,
+.project-students {
+  font-size: 0.95rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--muted);
+}

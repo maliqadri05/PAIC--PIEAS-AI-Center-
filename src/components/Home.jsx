@@ -36,7 +36,7 @@ const Home = ({ setCurrentPage }) => {
         </div>
 
          <div className="home-vision animate-fadeIn" style={{ animationDelay: '0.6s' }}>
-          <h2>Our Vision</h2>
+          <h2>OUR VISION</h2>
           <p>
             At PAIC, we focus on transformative research across multiple domains including deep learning, computer vision, autonomous systems, robotics, pattern recognition, biomedical informatics, and cybersecurity. Our multidisciplinary approach fosters collaboration and drives breakthrough innovations that address real-world challenges.
           </p>

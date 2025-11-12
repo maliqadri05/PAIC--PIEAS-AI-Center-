@@ -5,21 +5,38 @@
   --card-bg: rgba(255,255,255,0.04);
   --card-border: rgba(255,255,255,0.06);
   --accent: #ff3b3b; /* red accent */
+  --accent-gradient: linear-gradient(90deg, #ff3b3b, #d43a2a);
   --muted: rgba(255,255,255,0.7);
   --white: #ffffff;
 }
 
+h2 {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .contact-container{
   min-height: 100vh;
-  padding: 4rem 1.5rem;
+  padding: 4rem 1.5rem 2rem 1.5rem;
   background: var(--bg-gradient);
   color: var(--white);
+}
+
+.contact-header {
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .contact-title{
   text-align: center;
   font-size: 2.6rem;
-  margin-bottom: 2rem;
+  margin: 0;
+  width: 100%;
 }
 
 .contact-grid{
@@ -34,10 +51,18 @@
 .contact-info-card,
 .contact-form-card{
   background: rgba(0,0,0,0.45);
-  border: 1px solid var(--card-border);
+  border: 2px solid var(--card-border);
   border-radius: 12px;
   padding: 1.6rem;
   box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+  transition: all 0.35s ease;
+}
+
+.contact-info-card:hover,
+.contact-form-card:hover {
+  transform: translateY(-4px) scale(1.05);
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5), 0 12px 40px rgba(0, 0, 0, 0.7);
 }
 
 .contact-info-card h2,

@@ -5,8 +5,8 @@ const FacultyCard = ({ faculty }) => {
   const { name, title, qualification, email, image } = faculty;
 
   return (
-    // reuse the home-card styles so faculty cards match other cards
-    <div className="faculty-card home-card hover-card">
+    // use faculty-card which has all the proper hover effects
+    <div className="faculty-card">
       <div className="faculty-media">
         <img src={image || '/paic-logo.png'} alt={`${name} photo`} />
       </div>
