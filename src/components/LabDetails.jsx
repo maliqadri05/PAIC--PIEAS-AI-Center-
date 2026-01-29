@@ -10,7 +10,7 @@ const LabDetails = () => {
 
   const labsData = {
     'Deep Learning Lab': {
-      head: 'Dr. Ahmed Khan',
+      head: 'Dr. Asifullah Khan',
       icon: '🧠',
       description: 'The Deep Learning Lab focuses on developing advanced neural network architectures and training methodologies for solving complex computational problems. Our research spans from foundational deep learning models to cutting-edge applications in computer vision, natural language processing, and reinforcement learning.',
       resources: [
@@ -21,12 +21,11 @@ const LabDetails = () => {
         'Cloud Computing Services (AWS, Google Cloud)'
       ],
       faculty: [
-        { name: 'Dr. Ahmed Khan', title: 'Lab Director', specialty: 'Neural Architecture Design' },
-        { name: 'Dr. Amina Siddiqui', title: 'Senior Researcher', specialty: 'Generative Models & GANs' }
+        { name: 'Dr. Asifullah Khan', title: 'Lab Head', specialty: 'Deep Learning' }
       ]
     },
     'Computer Vision Lab': {
-      head: 'Dr. Sarah Ahmad',
+      head: 'Dr. Naeem Akhtar',
       icon: '👁️',
       description: 'The Computer Vision Lab specializes in developing algorithms and systems for image and video analysis. We work on object detection, semantic segmentation, pose estimation, and 3D reconstruction, with applications in surveillance, autonomous systems, and medical imaging.',
       resources: [
@@ -37,28 +36,11 @@ const LabDetails = () => {
         'Real-time Video Streaming Infrastructure'
       ],
       faculty: [
-        { name: 'Dr. Sarah Ahmad', title: 'Lab Director', specialty: 'Image Processing & Recognition' },
-        { name: 'Dr. Mustafa Hassan', title: 'Senior Researcher', specialty: 'Video Analysis & Tracking' }
+        { name: 'Dr. Naeem Akhtar', title: 'Lab Head', specialty: 'Computer Vision' }
       ]
     },
-    'Autonomous Navigation Lab': {
-      head: 'Dr. Muhammad Ali',
-      icon: '🏔️',
-      description: 'The Autonomous Navigation Lab develops control systems and algorithms for autonomous vehicles and robots. Our research includes SLAM, path planning, obstacle avoidance, and sensor fusion for robust navigation in complex environments.',
-      resources: [
-        'Drone & Ground Robot Platforms',
-        'GPS & INS Systems',
-        'LiDAR & Camera Sensor Suites',
-        'ROS (Robot Operating System) Framework',
-        'Simulation Environments (Gazebo, CARLA)'
-      ],
-      faculty: [
-        { name: 'Dr. Muhammad Ali', title: 'Lab Director', specialty: 'Path Planning & SLAM' },
-        { name: 'Dr. Fahad Hassan', title: 'Senior Researcher', specialty: 'Sensor Fusion' }
-      ]
-    },
-    'Robotics and Automation Lab': {
-      head: 'Dr. Fatima Malik',
+    'Robotics Lab': {
+      head: 'Dr. Nasir Rahman Jadoon',
       icon: '🤖',
       description: 'The Robotics and Automation Lab works on designing and programming industrial and collaborative robots for manufacturing and service applications. Focus areas include robotic manipulation, motion planning, human-robot interaction, and process automation.',
       resources: [
@@ -69,28 +51,11 @@ const LabDetails = () => {
         'Manufacturing Simulation Software'
       ],
       faculty: [
-        { name: 'Dr. Fatima Malik', title: 'Lab Director', specialty: 'Robotic Control & Manipulation' },
-        { name: 'Dr. Karim Hassan', title: 'Senior Researcher', specialty: 'Human-Robot Interaction' }
+        { name: 'Dr. Nasir Rahman Jadoon', title: 'Lab Head', specialty: 'Robotic Control & Manipulation' }
       ]
     },
-    'Pattern Recognition Lab': {
-      head: 'Dr. Hassan Raza',
-      icon: '📊',
-      description: 'The Pattern Recognition Lab focuses on developing machine learning algorithms for recognizing patterns in complex data. Applications include biometric authentication, text recognition, speech processing, and anomaly detection.',
-      resources: [
-        'Biometric Sensor Suites (Fingerprint, Iris)',
-        'Audio Processing Equipment',
-        'Document Scanning Systems',
-        'Statistical Analysis Tools (MATLAB, R)',
-        'Pattern Recognition Libraries & Frameworks'
-      ],
-      faculty: [
-        { name: 'Dr. Hassan Raza', title: 'Lab Director', specialty: 'Biometric Systems' },
-        { name: 'Dr. Amjad Hassan', title: 'Senior Researcher', specialty: 'Text & Document Processing' }
-      ]
-    },
-    'Biomedical Informatics Lab': {
-      head: 'Dr. Aisha Siddiqui',
+    'Bioinformatics Lab': {
+      head: 'Dr. Abdul Majid',
       icon: '⚕️',
       description: 'The Biomedical Informatics Lab applies AI and machine learning to healthcare and medical research. Our work includes disease diagnosis, medical image analysis, genomics analysis, and personalized medicine applications.',
       resources: [
@@ -101,24 +66,7 @@ const LabDetails = () => {
         'Healthcare Data Analytics Platforms'
       ],
       faculty: [
-        { name: 'Dr. Aisha Siddiqui', title: 'Lab Director', specialty: 'Medical AI & Diagnostics' },
-        { name: 'Dr. Sana Hassan', title: 'Senior Researcher', specialty: 'Genomics & Biomarkers' }
-      ]
-    },
-    'ML-Based Cyber Security Lab': {
-      head: 'Dr. Usman Shah',
-      icon: '🔒',
-      description: 'The ML-Based Cyber Security Lab develops machine learning solutions for network security, malware detection, and threat intelligence. Our research protects against evolving cyber threats through advanced anomaly detection and predictive security models.',
-      resources: [
-        'Network Traffic Analysis Tools',
-        'Malware Analysis Sandboxes',
-        'Cryptography Libraries & Implementations',
-        'Intrusion Detection Systems (IDS)',
-        'Security Information & Event Management (SIEM) Platforms'
-      ],
-      faculty: [
-        { name: 'Dr. Usman Shah', title: 'Lab Director', specialty: 'Intrusion Detection & Threat Analysis' },
-        { name: 'Dr. Rashid Ahmed', title: 'Senior Researcher', specialty: 'Malware Analysis & Prevention' }
+        { name: 'Dr. Abdul Majid', title: 'Lab Head', specialty: 'Medical AI & Diagnostics' }
       ]
     }
   };

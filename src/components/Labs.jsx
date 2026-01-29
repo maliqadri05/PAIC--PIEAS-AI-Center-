@@ -8,13 +8,10 @@ const Labs = () => {
   const [selectedLab, setSelectedLab] = useState(null);
 
   const labs = [
-    { name: 'Deep Learning Lab', head: 'Dr. Ahmed Khan', icon: '🧠', color: 'purple' },
-    { name: 'Computer Vision Lab', head: 'Dr. Sarah Ahmad', icon: '👁️', color: 'blue' },
-    { name: 'Autonomous Navigation Lab', head: 'Dr. Muhammad Ali', icon: '🏔️', color: 'green' },
-    { name: 'Robotics and Automation Lab', head: 'Dr. Fatima Malik', icon: '🤖', color: 'orange' },
-    { name: 'Pattern Recognition Lab', head: 'Dr. Hassan Raza', icon: '📊', color: 'pink' },
-    { name: 'Biomedical Informatics Lab', head: 'Dr. Aisha Siddiqui', icon: '⚕️', color: 'red' },
-    { name: 'ML-Based Cyber Security Lab', head: 'Dr. Usman Shah', icon: '🔒', color: 'indigo' }
+    { name: 'Computer Vision Lab', head: 'Dr. Naeem Akhtar', icon: '👁️', color: 'blue' },
+    { name: 'Deep Learning Lab', head: 'Dr. Asifullah Khan', icon: '🧠', color: 'purple' },
+    { name: 'Robotics Lab', head: 'Dr. Nasir Rahman Jadoon', icon: '🤖', color: 'orange' },
+    { name: 'Bioinformatics Lab', head: 'Dr. Abdul Majid', icon: '⚕️', color: 'red' },
   ];
 
   return (

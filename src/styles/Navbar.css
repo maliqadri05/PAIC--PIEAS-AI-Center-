@@ -2,19 +2,18 @@
   position: fixed;
   width: 100%;
   z-index: 1000;
-  /* Transparent / glass look */
   background: transparent;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border-bottom: 1px solid rgba(255,255,255,0.03);
+  animation: slideDown 0.6s ease-out;
 }
 
 .navbar.scrolled {
-  /* Slight translucent background when scrolled */
-  background: rgba(16, 16, 16, 0.35);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  background: rgba(16, 16, 16, 0.4);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .nav-container {
@@ -77,24 +76,56 @@
   font-weight: 600;
   font-size: 0.98rem;
   padding: 0.6rem 1rem;
-  transition: all 0.35s ease;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
   font-family: inherit;
   text-decoration: none;
   border-radius: 8px;
   letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 59, 59, 0.15), transparent);
+  transition: left 0.4s ease;
+  z-index: -1;
+}
+
+.nav-link:hover::before {
+  left: 100%;
 }
 
 .nav-link:hover {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.3);
   border-color: #ff3b3b;
-  box-shadow: 0 0 15px rgba(255, 59, 59, 0.4), inset 0 0 10px rgba(255, 59, 59, 0.1);
-  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.5), inset 0 0 12px rgba(255, 59, 59, 0.15);
+  transform: translateY(-2px) scale(1.05);
+}
+
+.nav-link:active {
+  transform: translateY(0px) scale(1.02);
 }
 
 .nav-link.active {
   color: #ffffff;
   background: rgba(0, 0, 0, 0.4);
   border-color: #ff3b3b;
-  box-shadow: 0 0 15px rgba(255, 59, 59, 0.5);
+  box-shadow: 0 0 20px rgba(255, 59, 59, 0.6);
+  animation: navPulse 1s ease-in-out infinite;
+}
+
+@keyframes navPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(255, 59, 59, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(255, 59, 59, 0.8), inset 0 0 10px rgba(255, 59, 59, 0.3);
+  }
 }

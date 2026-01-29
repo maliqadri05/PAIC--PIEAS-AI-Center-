@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -14,9 +15,16 @@ const Navbar = () => {
   const navItems = [
     { name: 'HOME', path: '/' },
     { name: 'LABS', path: '/labs' },
+    { name: 'PUBLICATIONS', path: '/publications' },
+    { name: 'EVENTS', path: '/events' },
     { name: 'ALUMNI', path: '/alumni' },
+    { name: 'ABOUT', path: '/about' },
     { name: 'CONTACT', path: '/contact' }
   ];
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
@@ -30,7 +38,7 @@ const Navbar = () => {
             <Link
               key={item.name}
               to={item.path}
-              className="nav-link"
+              className={`nav-link ${isActive(item.path) ? 'active' : ''}`}
             >
               {item.name}
             </Link>

@@ -1,0 +1,263 @@
+{
+  "info": {
+    "name": "PAIC Website Backend API",
+    "description": "Complete API collection for PAIC website contact management system",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["health"]
+        },
+        "description": "Check if backend server is running"
+      }
+    },
+    {
+      "name": "Submit Contact Form",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"John Doe\",\n  \"email\": \"john@example.com\",\n  \"subject\": \"Inquiry about PAIC Programs\",\n  \"message\": \"I am interested in learning more about the artificial intelligence programs offered at PIEAS.\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/submit",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "submit"]
+        },
+        "description": "Submit a new contact form (PUBLIC ENDPOINT)"
+      }
+    },
+    {
+      "name": "Get All Contacts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts?status=new&limit=50&offset=0&sortBy=created_at&order=DESC",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts"],
+          "query": [
+            {
+              "key": "status",
+              "value": "new",
+              "disabled": true
+            },
+            {
+              "key": "limit",
+              "value": "50"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            },
+            {
+              "key": "sortBy",
+              "value": "created_at"
+            },
+            {
+              "key": "order",
+              "value": "DESC"
+            }
+          ]
+        },
+        "description": "Get all contacts with pagination and filtering (ADMIN)"
+      }
+    },
+    {
+      "name": "Get Contact Statistics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/stats",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "stats"]
+        },
+        "description": "Get contact statistics (ADMIN)"
+      }
+    },
+    {
+      "name": "Get Single Contact",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts", "1"]
+        },
+        "description": "Get a specific contact by ID (ADMIN)"
+      }
+    },
+    {
+      "name": "Get Contacts by Email",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts/email/test@example.com",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts", "email", "test@example.com"]
+        },
+        "description": "Get all contacts from a specific email (ADMIN)"
+      }
+    },
+    {
+      "name": "Search Contacts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/search?q=PAIC&limit=50&offset=0",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "search"],
+          "query": [
+            {
+              "key": "q",
+              "value": "PAIC"
+            },
+            {
+              "key": "limit",
+              "value": "50"
+            },
+            {
+              "key": "offset",
+              "value": "0"
+            }
+          ]
+        },
+        "description": "Search contacts by keyword (ADMIN)"
+      }
+    },
+    {
+      "name": "Get Contacts by Date Range",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/date-range?startDate=2024-01-01&endDate=2024-12-31",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "date-range"],
+          "query": [
+            {
+              "key": "startDate",
+              "value": "2024-01-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2024-12-31"
+            }
+          ]
+        },
+        "description": "Get contacts within a date range (ADMIN)"
+      }
+    },
+    {
+      "name": "Update Contact Status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"read\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts/1/status",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts", "1", "status"]
+        },
+        "description": "Update contact status (new, read, responded, archived) (ADMIN)"
+      }
+    },
+    {
+      "name": "Update Contact Information",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"status\": \"responded\",\n  \"message\": \"Updated message content if needed\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts", "1"]
+        },
+        "description": "Update any contact field (ADMIN)"
+      }
+    },
+    {
+      "name": "Delete Contact (Soft Delete)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts", "1"]
+        },
+        "description": "Soft delete a contact (marked as deleted, data preserved) (ADMIN)"
+      }
+    },
+    {
+      "name": "Permanently Delete Contact",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/contacts/admin/contacts/1/permanent",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "contacts", "admin", "contacts", "1", "permanent"]
+        },
+        "description": "Permanently delete a contact (ADMIN - use with caution)"
+      }
+    }
+  ]
+}

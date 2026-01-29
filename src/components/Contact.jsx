@@ -8,24 +8,101 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState(false);
+
+  // Get API URL from environment, with proper fallback
+  const API_URL = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.trim() : 'http://localhost:5000';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    // Clear error when user starts typing
+    if (error) setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // simple validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      alert('Please fill in all fields.');
+    setError('');
+    setSuccess(false);
+    setIsLoading(true);
+
+    // Client-side validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.subject.trim() || !formData.message.trim()) {
+      setError('Please fill in all fields.');
+      setIsLoading(false);
       return;
     }
 
-    // For now just log and show confirmation
-    console.log('Contact form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    if (formData.name.length < 2) {
+      setError('Name must be at least 2 characters long.');
+      setIsLoading(false);
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      setError('Please enter a valid email address.');
+      setIsLoading(false);
+      return;
+    }
+
+    if (formData.subject.length < 5) {
+      setError('Subject must be at least 5 characters long.');
+      setIsLoading(false);
+      return;
+    }
+
+    if (formData.message.length < 10) {
+      setError('Message must be at least 10 characters long.');
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      console.log('Sending request to:', `${API_URL}/api/contacts/submit`);
+      
+      const response = await fetch(`${API_URL}/api/contacts/submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log('Response status:', response.status);
+      const data = await response.json();
+      console.log('Response data:', data);
+
+      if (!response.ok) {
+        throw new Error(data.message || `Error ${response.status}: ${response.statusText}`);
+      }
+
+      // Success!
+      setSuccess(true);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      
+      // Show success message
+      alert('Thank you for your message! We will get back to you soon.');
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => setSuccess(false), 5000);
+    } catch (err) {
+      console.error('Error submitting contact form:', err);
+      
+      // More specific error messages
+      if (err.message.includes('Failed to fetch')) {
+        setError('Cannot connect to server. Make sure the backend is running on ' + API_URL);
+      } else if (err.message.includes('NetworkError')) {
+        setError('Network error. Please check your internet connection.');
+      } else if (err.message.includes('CORS')) {
+        setError('CORS error. Please check backend configuration.');
+      } else {
+        setError(err.message || 'Failed to submit your message. Please try again later.');
+      }
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -55,6 +132,8 @@ const Contact = () => {
 
         <div className="contact-form-card animate-fadeIn" style={{ animationDelay: '0.2s' }}>
           <h2>Send Message</h2>
+          {error && <div className="error-message animate-slideDown">{error}</div>}
+          {success && <div className="success-message animate-slideDown"><span className="checkmark">✓</span> Message sent successfully!</div>}
           <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <label htmlFor="name">Name</label>
@@ -100,8 +179,8 @@ const Contact = () => {
                 rows={4}
               />
             </div>
-            <button type="submit" className="submit-btn">
-              Send Message
+            <button type="submit" className="submit-btn" disabled={isLoading}>
+              {isLoading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>

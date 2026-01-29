@@ -68,62 +68,68 @@ const LabProjects = () => {
 
     // Computer Vision Lab
     {
-      title: 'Real-time Object Detection in Crowded Scenes',
+      title: 'Virtual Assistant for Medicine',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Sarah Ahmad',
-      students: 'Bilal Ahmed, Maryam Noor',
-      description: 'Efficient detection and tracking of multiple objects in high-density environments for surveillance and autonomous systems.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Mr. Muhammad Ali Qadri, Mr. Muhammad Umar Riaz',
+      description: 'This project aims to develop a virtual assistant that can understand, interpret, and provide recommendations based on multi-modal data, including text, reports, and images (e.g., X-rays).'
     },
     {
-      title: 'Facial Recognition System for Security Applications',
+      title: 'Augmented Reality-based Navigator',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Sarah Ahmad',
-      students: 'Faisal Khan, Rana Malik',
-      description: 'Deep learning-based facial recognition system with real-time processing for identity verification and access control.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Mr. Subhan Amjad, Mr. Muhammad Musa, Mr. Muhammad Huzaifa Bilal',
+      description: 'This project aims to develop an AR-based virtual assistant to help people navigate their environment. The navigator will recognize scenes and provide guidance. It can be used by visitors as well as individuals with impaired vision.'
     },
     {
-      title: 'Semantic Segmentation in Urban Scenes',
+      title: 'Escaping Robot from Combat',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Mustafa Hassan',
-      students: 'Tariq Ali, Hadia Ahmed',
-      description: 'Pixel-level classification of urban environments for autonomous driving, urban planning, and scene understanding.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Mr. Muneeb Waheed, Mr. Rayan Ahmed',
+      description: 'Combat refers to a scenario in which a robot or a person tests their strength and abilities in an arena until the opposing robot is immobilized or stuck. This project aims to train an autonomous robot to avoid or escape combat initiated by a human.'
     },
     {
-      title: '3D Reconstruction from Multi-view Images',
+      title: 'Robotic Arm Manipulation using Vision-Language-Action Model',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Sarah Ahmad',
-      students: 'Waseem Raza, Zara Khan',
-      description: 'Reconstruction of 3D models and point clouds from multiple 2D images using structure-from-motion techniques.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Ms. Urwah Rasheed, Ms. Wajeeha Jahangir',
+      description: 'Given a language instruction and a camera image of the robot workspace, the goal is to predict the robot actions—(x, y, z, roll, pitch, yaw, gripper)—and control a robotic arm to execute the instruction, such as picking up and placing items.'
     },
     {
-      title: 'Video Analysis for Action Recognition',
+      title: 'Text-based Robotic Navigation using Vision-and-Language Model',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Mustafa Hassan',
-      students: 'Iqbal Hassan, Noor Fatima',
-      description: 'Detection and classification of human actions and activities in video sequences using spatio-temporal deep learning models.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Ms. Alishbah Bashir , Ms. Nida Pervaiz',
+      description: 'Given a high-level textual instruction for navigating within a scene, the goal is to execute this instruction to guide an embodied device (such as a robot or unmanned ground vehicle). A large language model (LLM) will parse the natural language instruction into a sequence of landmarks, which serve as intermediary subgoals for navigation. A vision-and-language model will then be used to ground the robot’s visual observations to these landmark phrases.'
     },
     {
-      title: 'Optical Character Recognition for Urdu Documents',
+      title: 'Virtual Agent for Real Estate',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Sarah Ahmad',
-      students: 'Ahmed Malik, Salma Iqbal',
-      description: 'Specialized OCR system for recognizing and digitizing Urdu text from scanned documents and images.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Mr. Muhammad Ahsan Ali, Ms. Hanana Asif',
+      description: 'Virtual Agent for Real Estate is an AI based Virtual Reality solution for Real Estate Business. This system primarily includes a context-aware Virtual Agent trained on real estate datasets, architectural layouts, pricing trends, and buyer preferences. This Agent is a Digital Twin of a real estate agent designed to replicate the knowledge, behavior and interactive capabilities of a human agent during property tours. It guides the users through home tours of 3D VR models of residential properties. Users can explore realistic digital replicas of homes with interactive navigation. The Virtual agent offers voice-enabled guided tours; answering questions, highlighting features, and suggesting properties based on the user interests. The aim of this project is to bring the real estate business to virtual  platforms to make the process easier and less stressful. It will help people who can not visit properties in person. Just like shopping has moved to online platforms, real estate also needs to move into virtual reality'
     },
     {
-      title: 'Image Enhancement and Restoration Techniques',
+      title: 'Multi-Modal Forgery Detection in Identity Documents',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Mustafa Hassan',
-      students: 'Saad Ahmed, Leila Khan',
-      description: 'Deep learning methods for image denoising, super-resolution, and restoration of degraded or low-quality images.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Ms. Bushra Fatima, Ms. Noor Fatima',
+      description: 'Identity document forgery involves altering a legitimate identity document to impersonate someone else. The objective of this project is to detect such forgeries by analyzing both textual and visual elements of the document.'
     },
     {
-      title: 'Pose Estimation and Skeleton Tracking',
+      title: 'Estimating Cognitive Load Using BCI',
       lab: 'Computer Vision Lab',
-      supervisor: 'Dr. Sarah Ahmad',
-      students: 'Azhar Malik, Rabia Hassan',
-      description: 'Real-time human pose estimation and skeletal tracking for gesture recognition and motion capture applications.'
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Ms. Eshal Ali, Ms. Hadiqa Abdul Sattar Nadeem',
+      description: 'This project aims to measure cognitive load through Brain-Computer Interface (BCI) technology. Such advancements will enhance applications in areas like e-learning, augmented and virtual reality, conversational and social AI, and skill development (e.g., driving).'
     },
-
+    {
+      title: 'AI Motion Capture for Personalized Fitness Training',
+      lab: 'Computer Vision Lab',
+      supervisor: 'Dr. Naeem Akhtar',
+      students: 'Mr. Aamiroon Ishaq, Mr. Rehman Ashraf , Mr. Zohaib Ali Singay',
+      description: 'AI Motion Capture for Personalized Fitness Training. Project Description: This Final Year Project is being developed in collaboration with TrueID, a company based in NUST Science and Technology Park (NSTP). The goal is to build an AI-powered Virtual Fitness Coach that uses webcam based motion capture to provide real-time feedback to users during home workouts—without the need for expensive or specialized hardware. Using advanced computer vision and pose estimation techniques, the system will detect human body posture through a regular webcam and compare it with ideal exercise forms. It will offer real-time audio and visual feedback like "Straighten your back" or "Lower your hips," helping users maintain proper form and reduce injury risk. The application will also include performance scoring, progress tracking, and motivational insights, making it suitable for users without access to in-person trainers. Unlike existing systems that rely on smart mirrors, motion sensors, or high-end devices, this solution focuses on affordability, accessibility, and ease of use. Technologies used include real-time pose estimation, machine learning for posture analysis, and a responsive user interface for engagement. The project bridges intelligent software and physical fitness, contributing to a smarter, healthier digital lifestyle.'
+    },
     // Autonomous Navigation Lab
     {
       title: 'Autonomous Drone Navigation System',
