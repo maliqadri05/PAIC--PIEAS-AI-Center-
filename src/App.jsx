@@ -5,9 +5,8 @@ import Home from './components/Home';
 import Labs from './components/Labs';
 import Alumni from './components/Alumni';
 import Contact from './components/Contact';
-import About from './components/About';
 import Publications from './components/Publications';
-import Events from './components/Events';
+import ComingSoon from './components/ComingSoon';
 import LabProjects from './components/LabProjects';
 import LabDetails from './components/LabDetails';
 import './styles/App.css';
@@ -60,9 +59,9 @@ function App() {
           <Route path="/labs/:labName/details" element={<LabDetails />} />
           <Route path="/labs/:labName/projects" element={<LabProjects />} />
           <Route path="/publications" element={<Publications />} />
-          <Route path="/events" element={<Events />} />
+          <Route path="/events" element={<ComingSoon pageName="Events" />} />
           <Route path="/alumni" element={<Alumni />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<ComingSoon pageName="About" />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

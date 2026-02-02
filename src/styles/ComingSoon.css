@@ -1,0 +1,44 @@
+.coming-soon {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+}
+
+.coming-container {
+  max-width: 820px;
+  text-align: center;
+  background: rgba(0,0,0,0.45);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+.coming-title {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.coming-sub {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 1.25rem;
+}
+
+.coming-actions .btn {
+  display: inline-block;
+  margin: 0 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #fff;
+  background: #ff3b3b;
+}
+
+.coming-actions .btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.12);
+}

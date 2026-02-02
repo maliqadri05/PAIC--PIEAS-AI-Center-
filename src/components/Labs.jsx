@@ -10,7 +10,7 @@ const Labs = () => {
   const labs = [
     { name: 'Computer Vision Lab', head: 'Dr. Naeem Akhtar', icon: '👁️', color: 'blue' },
     { name: 'Deep Learning Lab', head: 'Dr. Asifullah Khan', icon: '🧠', color: 'purple' },
-    { name: 'Robotics Lab', head: 'Dr. Nasir Rahman Jadoon', icon: '🤖', color: 'orange' },
+    // { name: 'Robotics Lab', head: 'Dr. Nasir Rahman Jadoon', icon: '🤖', color: 'orange' },
     { name: 'Bioinformatics Lab', head: 'Dr. Abdul Majid', icon: '⚕️', color: 'red' },
   ];
 

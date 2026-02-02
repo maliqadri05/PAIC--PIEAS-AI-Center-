@@ -10,83 +10,86 @@ const Publications = () => {
   const publications = [
     {
       id: 1,
-      title: 'Transformer-Based Architecture for Real-Time Object Detection',
-      authors: 'Ahmed Khan, Fatima Ali, Dr. Muhammad Hassan',
-      journal: 'IEEE Transactions on Computer Vision',
-      year: 2024,
-      lab: 'Computer Vision',
-      abstract: 'This paper presents a novel transformer-based approach for real-time object detection with improved accuracy and reduced computational overhead.',
+      title: 'A survey of the recent architectures of deep convolutional neural networks',
+      authors: 'Asifullah Khan, Anabia Sohail, Umme Zahoora, Aqsa Saeed Qureshi',
+      journal: 'Artificial intelligence review',
+      year: 2026,
+      lab: 'Deep Learning',
+      abstract: 'Deep Convolutional Neural Network (CNN) is a special type of Neural Networks, which has shown exemplary performance on several competitions related to Computer Vision and Image Processing. Some of the exciting application areas of CNN include Image Classification and Segmentation, Object Detection, Video Processing, Natural Language Processing, and Speech Recognition. The powerful learning ability of deep CNN is primarily due to the use of multiple feature extraction stages that can automatically learn representations from the data. The availability of a large amount of data and improvement in the hardware technology has accelerated the research in CNNs, and recently interesting deep CNN architectures have been reported. Several inspiring ideas to bring advancements in CNNs have been explored, such as the use of different activation and loss functions, parameter optimization, regularization, and architectural innovations. However, the significant improvement in the representational capacity of the deep CNN is achieved through architectural innovations. Notably, the ideas of exploiting spatial and channel information, depth and width of architecture, and multi-path information processing have gained substantial attention. Similarly, the idea of using a block of layers as a structural unit is also gaining popularity. This survey thus focuses on the intrinsic taxonomy present in the recently reported deep CNN architectures and, consequently, classifies the recent innovations in CNN architectures into seven different categories. These seven categories are based on spatial exploitation, depth, multi-path, width, feature-map exploitation, channel boosting, and attention. Additionally, the elementary understanding of CNN components, current challenges, and applications of CNN are also provided.',
       doi: 'https://doi.org/10.1109/TVCG.2024.1234567'
     },
+    
     {
       id: 2,
-      title: 'Autonomous Navigation in Complex Environments Using Deep Reinforcement Learning',
-      authors: 'Sara Ahmed, Dr. Khalid Mahmood, Zain Ul Abidin',
-      journal: 'Journal of Artificial Intelligence Research',
-      year: 2024,
-      lab: 'Autonomous Systems',
-      abstract: 'A comprehensive study on using deep reinforcement learning for autonomous robot navigation in dynamic and unpredictable environments.',
-      doi: 'https://doi.org/10.1016/j.jair.2024.789012'
+      title: 'A survey of the recent architectures of deep convolutional neural networks',
+      authors: 'Asifullah Khan, Anabia Sohail, Umme Zahoora & Aqsa Saeed Qureshi ',
+      journal: 'Artificial intelligence review',
+      year: 2020,
+      lab: 'Deep Learning',
+      abstract: 'Deep Convolutional Neural Network (CNN) is a special type of Neural Networks, which has shown exemplary performance on several competitions related to Computer Vision and Image Processing. Some of the exciting application areas of CNN include Image Classification and Segmentation, Object Detection, Video Processing, Natural Language Processing, and Speech Recognition. The powerful learning ability of deep CNN is primarily due to the use of multiple feature extraction stages that can automatically learn representations from the data. The availability of a large amount of data and improvement in the hardware technology has accelerated the research in CNNs, and recently interesting deep CNN architectures have been reported. Several inspiring ideas to bring advancements in CNNs have been explored, such as the use of different activation and loss functions, parameter optimization, regularization, and architectural innovations. However, the significant improvement in the representational capacity of the deep CNN is achieved through architectural innovations. Notably, the ideas of exploiting spatial and channel information, depth and width of architecture, and multi-path information processing have gained substantial attention. Similarly, the idea of using a block of layers as a structural unit is also gaining popularity. This survey thus focuses on the intrinsic taxonomy present in the recently reported deep CNN architectures and, consequently, classifies the recent innovations in CNN architectures into seven different categories. These seven categories are based on spatial exploitation, depth, multi-path, width, feature-map exploitation, channel boosting, and attention. Additionally, the elementary understanding of CNN components, current challenges, and applications of CNN are also provided.',
+      doi: 'https://doi.org/10.1038/s42256-023-901234'
     },
+
     {
       id: 3,
-      title: 'Adversarial Robustness in Neural Networks: A Survey',
-      authors: 'Dr. Imran Ahmed, Usman Khan, Hira Mahmood',
-      journal: 'ACM Computing Surveys',
-      year: 2023,
-      lab: 'Cybersecurity',
-      abstract: 'A comprehensive survey of adversarial attacks and defense mechanisms in modern neural networks.',
-      doi: 'https://doi.org/10.1145/acm.surveys.2023.345678'
+      title: 'Wind power prediction using deep neural network based meta regression and transfer learning',
+      authors: 'Aqsa Saeed Qureshi, Asifullah Khan, Aneela Zameer, Anila Usman',
+      journal: 'Applied Soft Computing',
+      year: 2017,
+      lab: 'Deep Learning',
+      abstract: 'An innovative short term wind power prediction system is proposed which exploits the learning ability of deep neural network based ensemble technique and the concept of transfer learning. In the proposed DNN-MRT scheme, deep auto-encoders act as base-regressors, whereas Deep Belief Network is used as a meta-regressor. Employing the concept of ensemble learning facilitates robust and collective decision on test data, whereas deep base and meta-regressors ultimately enhance the performance of the proposed DNN-MRT approach. The concept of transfer learning not only saves time required during training of a base-regressor on each individual wind farm dataset from scratch but also stipulates good weight initialization points for each of the wind farm for training. The effectiveness of the proposed, DNN-MRT technique is expressed by comparing statistical performance measures in terms of root mean squared error (RMSE), mean absolute error (MAE), and standard deviation error (SDE) with other existing techniques.',
+      doi: 'https://www.sciencedirect.com/science/article/pii/S1568494617302946'
     },
+    
     {
       id: 4,
-      title: 'Graph Neural Networks for Protein Structure Prediction',
-      authors: 'Dr. Saira Khan, Ali Ahmed, Mehwish Aziz',
-      journal: 'Nature Machine Intelligence',
-      year: 2023,
+      title: 'Recent Progress on Generative Adversarial Networks (GANs): A Survey',
+      authors: 'Zhaoqing Pan, Weijie Yu, Xiaokai Yi, Asifullah Khan, Feng Yuan, Yuhui Zheng',
+      journal: 'Journal of Artificial Intelligence Research',
+      year: 2019,
       lab: 'Deep Learning',
-      abstract: 'Application of graph neural networks for accurate and efficient protein 3D structure prediction from amino acid sequences.',
-      doi: 'https://doi.org/10.1038/s42256-023-901234'
+      abstract: 'Generative adversarial network (GANs) is one of the most important research avenues in the field of artificial intelligence, and its outstanding data generation capacity has received wide attention. In this paper, we present the recent progress on GANs. First, the basic theory of GANs and the differences among different generative models in recent years were analyzed and summarized. Then, the derived models of GANs are classified and introduced one by one. Third, the training tricks and evaluation metrics were given. Fourth, the applications of GANs were introduced. Finally, the problem, we need to address, and future directions were discussed.',
+      doi: 'https://ieeexplore.ieee.org/abstract/document/8667290'
     },
     {
       id: 5,
-      title: 'Medical Image Analysis Using Federated Learning',
-      authors: 'Dr. Fatima Ahmed, Hassan Ali, Ayesha Khan',
-      journal: 'IEEE Transactions on Medical Imaging',
-      year: 2023,
+      title: 'Prediction of human breast and colon cancers from imbalanced data using nearest neighbor and support vector machines',
+      authors: 'Abdul Majid, Safdar Ali, Mubashar Iqbal, Nabeela Kausar',
+      journal: 'Computer methods and programs in biomedicine',
+      year: 2014,
       lab: 'Biomedical Informatics',
-      abstract: 'A federated learning approach for medical image classification that preserves patient privacy while improving model accuracy.',
+      abstract: 'This study proposes a novel prediction approach for human breast and colon cancers using different feature spaces. The proposed scheme consists of two stages: the preprocessor and the predictor. In the preprocessor stage, the mega-trend diffusion (MTD) technique is employed to increase the samples of the minority class, thereby balancing the dataset. In the predictor stage, machine-learning approaches of K-nearest neighbor (KNN) and support vector machines (SVM) are used to develop hybrid MTD-SVM and MTD-KNN prediction models. MTD-SVM model has provided the best values of accuracy, G-mean and Matthews correlation coefficient of 96.71%, 96.70% and 71.98% for cancer/non-cancer dataset, breast/non-breast cancer dataset and colon/non-colon cancer dataset, respectively. We found that hybrid MTD-SVM is the best with respect to prediction performance and computational cost. MTD-KNN model has achieved moderately better prediction as compared to hybrid MTD-NB (Naïve Bayes) but at the expense of higher computing cost. MTD-KNN model is faster than MTD-RF (random forest) but its prediction is not better than MTD-RF. To the best of our knowledge, the reported results are the best results, so far, for these datasets. The proposed scheme indicates that the developed models can be used as a tool for the prediction of cancer. This scheme may be useful for study of any sequential information such as protein sequence or any nucleic acid sequence.',
       doi: 'https://doi.org/10.1109/TMI.2023.567890'
     },
     {
       id: 6,
-      title: 'Vision-Based Manipulation Planning for Industrial Robots',
-      authors: 'Dr. Mohammad Hassan, Zain Khan, Ali Raza',
-      journal: 'Robotics and Autonomous Systems',
-      year: 2023,
-      lab: 'Robotics',
-      abstract: 'Integration of computer vision and deep learning for autonomous manipulation tasks in industrial robotics applications.',
-      doi: 'https://doi.org/10.1016/j.robot.2023.123456'
+      title: 'Lattice constant prediction of cubic and monoclinic perovskites using neural networks and support vector regression',
+      authors: 'Abdul Majid, Asifullah Khan, Gibran Javed, Anwar M Mirza',
+      journal: 'Computational materials science',
+      year: 2010,
+      lab: 'Biomedical Informatics',
+      abstract: 'In the study of crystalline materials, the lattice constant (LC) of perovskites compounds play important role in the identification of materials. It reveals various interesting properties. In this study, we have employed Support Vector Regression, Artificial Neural Network, and Generalized Regression Neural Network based Computational Intelligent (CI) techniques to predict LC of cubic and monoclinic perovskites. Due to their interesting physiochemical properties, investigations in modeling the structural properties of perovskites have gained considerable attention. A dataset of a reasonable number of cubic and monoclinic perovskites are collected from the current literature. The CI techniques can efficiently correlate the LC of the perovskites materials with the ionic radii of constituent elements. A performance analysis of CI techniques is carried out with Multiple Linear Regression techniques, SPuDS software, and Density-Functional Theory. We have observed that the CI techniques yield accurate LC prediction as against the conventional approaches.',
+      doi: 'https://www.sciencedirect.com/science/article/pii/S0927025610004970'
     },
     {
       id: 7,
-      title: 'Attention Mechanisms for Long-Range Dependencies in Sequential Data',
-      authors: 'Dr. Usman Ahmed, Hina Khan, Salman Ali',
-      journal: 'Neural Networks',
-      year: 2022,
-      lab: 'Deep Learning',
-      abstract: 'Novel attention mechanism architecture for capturing long-range dependencies in temporal sequences.',
-      doi: 'https://doi.org/10.1016/j.neunet.2022.654321'
+      title: 'Machine learning based adaptive watermark decoding in view of anticipated attack',
+      authors: 'Asifullah Khan, Syed Fahad Tahir, Abdul Majid, Tae-Sun Choi',
+      journal: 'Pattern Recognition',
+      year: 2008,
+      lab: 'Biomedical Informatics',
+      abstract: 'We present an innovative scheme of blindly extracting message bits when a watermarked image is distorted. In this scheme, we have exploited the capabilities of machine learning (ML) approaches for nonlinearly classifying the embedded bits. The proposed technique adaptively modifies the decoding strategy in view of the anticipated attack. The extraction of bits is considered as a binary classification problem. Conventionally, a hard decoder is used with the assumption that the underlying distribution of the discrete cosine transform coefficients do not change appreciably. However, in case of attacks related to real world applications of watermarking, such as JPEG compression in case of shared medical image warehouses, these coefficients are heavily altered. The sufficient statistics corresponding to the maximum likelihood based decoding process, which are considered as features in the proposed scheme, overlap at the receiving end, and a simple hard decoder fails to classify them properly. In contrast, our proposed ML decoding model has attained highest accuracy on the test data. Experimental results show that through its training phase, our proposed decoding scheme is able to cope with the alterations in features introduced by a new attack. Consequently, it achieves promising improvement in terms of bit correct ratio in comparison to the existing decoding scheme.',
+      doi: 'https://www.sciencedirect.com/science/article/pii/S0031320308000101'
     },
     {
       id: 8,
-      title: 'Semantic Segmentation for Autonomous Driving',
-      authors: 'Dr. Khalid Khan, Farrah Ahmed, Hassan Malik',
-      journal: 'International Journal of Computer Vision',
-      year: 2022,
-      lab: 'Computer Vision',
-      abstract: 'Advanced semantic segmentation techniques for scene understanding in autonomous vehicle applications.',
-      doi: 'https://doi.org/10.1007/s11263-022-987654'
+      title: 'Lattice constant prediction of orthorhombic ABO3 perovskites using support vector machines',
+      authors: 'Syed Gibran Javed, Asifullah Khan, Abdul Majid, Anwar M Mirza, J Bashir',
+      journal: 'Computational materials science',
+      year: 2007,
+      lab: 'Biomedical Informatics',
+      abstract: 'In this paper, a novel lattice constant prediction model based on support vector machine is proposed. In this proposed technique, advanced data set generation technique is also used which is helpful to develop fairly generalized prediction models. This enables us to achieve improved prediction performance of lattice constant of structurally known perovskites. Experimental results obtained using orthorhombic ABO3 perovskites demonstrate that our proposed prediction model is more efficient, robust and fast than those based on artificial neural networks.',
+      doi: 'https://www.sciencedirect.com/science/article/pii/S0927025606002540'
     }
   ];
 

@@ -38,7 +38,7 @@ const Home = ({ setCurrentPage }) => {
          <div className="home-vision animate-fadeIn" style={{ animationDelay: '0.6s' }}>
           <h2>OUR VISION</h2>
           <p>
-            At PAIC, we focus on transformative research across multiple domains including deep learning, computer vision, autonomous systems, robotics, pattern recognition, biomedical informatics, and cybersecurity. Our multidisciplinary approach fosters collaboration and drives breakthrough innovations that address real-world challenges.
+            At PAIC, we focus on transformative research across multiple domains including deep learning, computer vision, autonomous systems, robotics, pattern recognition and biomedical informatics. Our multidisciplinary approach fosters collaboration and drives breakthrough innovations that address real-world challenges.
           </p>
           <p>
             Through our specialized laboratories and dedicated faculty, we provide an exceptional environment for research excellence, fostering the next generation of AI leaders and contributing to Pakistan's technological advancement on the global stage.

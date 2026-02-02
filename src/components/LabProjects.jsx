@@ -10,60 +10,39 @@ const LabProjects = () => {
   const projects = [
     // Deep Learning Lab
     {
-      title: 'Neural Architecture Search for Edge Devices',
+      title: 'CodeCraft: Automated Code Generation Suite for Enterprise Web Applications',
       lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Ahmed Khan',
-      students: 'Ali Hassan, Zainab Farooq',
-      description: 'Automated discovery of optimal neural network architectures optimized for resource-constrained edge devices and IoT applications.'
+      supervisor: 'Dr. Asifullah Khan',
+      students: 'Mr. Abdul Rehman , Mr. Muhammad Huzaifa',
+      description: 'CodeCraft is a no-code solution designed to automate the generation of enterprise web application code. By analyzing a given database schema—including tables, relationships, and constraints—the system automatically produces an extendable code skeleton. It generates backend code in NestJS, frontend code in Angular, and integrated automated testing scripts with prebuilt, configurable modules. In addition, a multiagent framework of AI agents is implemented to collaboratively manage and execute various code generation tasks, thereby streamlining the process and further reducing development time by approximately 75–80% with minimal manual intervention.'
     },
     {
-      title: 'Transformer Models for Sequential Data Processing',
+      title: 'AI-Powered Micro-Learning Platform for AI Course',
       lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Ahmed Khan',
-      students: 'Hassan Malik, Nadia Raza',
-      description: 'Implementation of state-of-the-art transformer architectures for natural language processing, time series analysis, and sequence modeling tasks.'
+      supervisor: 'Dr. Asifullah Khan',
+      students: 'Mr. Abu Bakar, Mr. Hussain Ali Jahangir',
+      description: 'Code Reels is an AI-driven, mobile-first platform designed to revolutionize computer science education by transforming long, complex courses into engaging, interactive, TikTok-style reels. These 60-second clips incorporate quizzes, code simulations, and synthetic instructors to captivate Gen Z learners. The platform leverages fine-tuned language models, multimodal AI, and gamification to provide a personalized, immersive learning experience.'
     },
     {
-      title: 'Generative Adversarial Networks for Image Synthesis',
+      title: 'Anomaly Detection at University Entrance Using YOLOv11',
       lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Amina Siddiqui',
-      students: 'Fatima Khan, Adnan Ahmed',
-      description: 'Development of GAN models for realistic image generation, style transfer, and data augmentation in computer vision applications.'
+      supervisor: 'Dr. Asifullah Khan',
+      students: 'Mr. Shahzaib Khan, Mr. Waleed Abbasi',
+      description: 'In context of security monitoring, this project proposes the development of an Anomaly Detection System at University Entrance Using YOLOv11. This system will leverage advanced real-time object detection and anomaly classification to identify suspicious activities at university entrances. YOLOv11, the latest iteration of the You Only Look Once (YOLO) object detection framework, enhances security by accurately detecting unauthorized access, unattended objects, and unusual human behavior in real-time. The model will be trained on university-specific surveillance footage to improve detection efficiency and reduce false alarms. This project will employ deep learning architectures such as YOLOv11, OpenCV, and TensorFlow/PyTorch to create a highly responsive and automated security solution.'
     },
     {
-      title: 'Recurrent Neural Networks for Time Series Forecasting',
+      title: 'Development of an ML-Based Detection System for Insider Threats in Cloud Environments',
       lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Ahmed Khan',
-      students: 'Khalid Hussain, Sara Jamil',
-      description: 'LSTM and GRU-based models for accurate prediction of temporal sequences in finance, weather, and signal processing domains.'
+      supervisor: 'Dr. Asifullah Khan',
+      students: 'Mr. Ali Raza, Mr. Muhammad Hammad Tahir, Mr. Muhammad Talal Haider',
+      description: 'This project aims to build a system to detect insider threats in cloud environments using machine learning (ML). Insider threats involve malicious or negligent actions by authorized users within an organization, which can lead to data breaches, data leaks, or system compromises. The system will analyze user activity in cloud platforms (e.g., AWS, Azure) to identify suspicious behavior and flag potential threats in real-time.'
     },
     {
-      title: 'Attention Mechanisms in Deep Learning',
+      title: 'Development of a Real-Time Human Pose based Threat Intelligence System',
       lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Amina Siddiqui',
-      students: 'Omar Farooq, Ayesha Khan',
-      description: 'Research on various attention mechanisms to improve model interpretability and performance across diverse neural network architectures.'
-    },
-    {
-      title: 'Convolutional Neural Networks for Medical Imaging',
-      lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Ahmed Khan',
-      students: 'Rashid Ali, Hina Ahmed',
-      description: 'Advanced CNN models for medical image analysis including CT scans, X-rays, and MRI for disease detection and diagnosis.'
-    },
-    {
-      title: 'Transfer Learning Applications in Domain Adaptation',
-      lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Amina Siddiqui',
-      students: 'Bilal Raza, Samira Hassan',
-      description: 'Techniques for adapting pre-trained models to new domains and tasks with minimal labeled data in various application areas.'
-    },
-    {
-      title: 'Optimization Techniques for Neural Networks',
-      lab: 'Deep Learning Lab',
-      supervisor: 'Dr. Ahmed Khan',
-      students: 'Imran Malik, Laiba Khan',
-      description: 'Study and implementation of advanced optimization algorithms including Adam, RMSprop, and gradient-based methods for faster convergence.'
+      supervisor: 'Dr. Asifullah Khan',
+      students: 'Ms. Hafsa , Ms. Hajra , Ms. Zainab Tariq',
+      description: 'This project focuses on developing a real-time pose-based behavior classification system for enhanced security monitoring by leveraging advanced computer vision and machine learning techniques. It aims to accurately estimate human body keypoints from surveillance video, extract discriminative pose features such as joint angles and motion trajectories, and classify behaviors into categories such as normal, suspicious, or aggressive using trained machine learning models. The system integrates pose estimation frameworks (e.g., OpenPose or PoseNet) with classification models built using tools like OpenCV, TensorFlow, or PyTorch, enabling continuous analysis of live video streams and automatic alert generation upon detection of abnormal activities. Applicable to domains such as crowd surveillance, perimeter security, retail loss prevention, and workplace safety, the project ultimately seeks to improve situational awareness and response effectiveness by providing timely, reliable detection of potentially threatening human behaviors.'
     },
 
     // Computer Vision Lab
@@ -130,295 +109,30 @@ const LabProjects = () => {
       students: 'Mr. Aamiroon Ishaq, Mr. Rehman Ashraf , Mr. Zohaib Ali Singay',
       description: 'AI Motion Capture for Personalized Fitness Training. Project Description: This Final Year Project is being developed in collaboration with TrueID, a company based in NUST Science and Technology Park (NSTP). The goal is to build an AI-powered Virtual Fitness Coach that uses webcam based motion capture to provide real-time feedback to users during home workouts—without the need for expensive or specialized hardware. Using advanced computer vision and pose estimation techniques, the system will detect human body posture through a regular webcam and compare it with ideal exercise forms. It will offer real-time audio and visual feedback like "Straighten your back" or "Lower your hips," helping users maintain proper form and reduce injury risk. The application will also include performance scoring, progress tracking, and motivational insights, making it suitable for users without access to in-person trainers. Unlike existing systems that rely on smart mirrors, motion sensors, or high-end devices, this solution focuses on affordability, accessibility, and ease of use. Technologies used include real-time pose estimation, machine learning for posture analysis, and a responsive user interface for engagement. The project bridges intelligent software and physical fitness, contributing to a smarter, healthier digital lifestyle.'
     },
-    // Autonomous Navigation Lab
+
+    // Bioinformatics Lab
     {
-      title: 'Autonomous Drone Navigation System',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Muhammad Ali',
-      students: 'Hamza Iqbal, Sana Khan',
-      description: 'Development of autonomous flight control systems for drones with GPS, computer vision, and sensor fusion capabilities.'
+      title: 'Development of AI/ML based Fake video detection systemenomeVis: Interactive Genome Visualization and Analysis Platform',
+      lab: 'Bioinformatics Lab',
+      supervisor: 'Dr. Abdul Majid',
+      students: 'Mr. Muhammad Naveed Akhtar, Mr. Shahzaib Khan',
+      description: 'This project aims to develop a deepfake detection system using deep neural networks to address the growing threat posed by manipulated videos to information authenticity and national security. By integrating optical features with transdermal optical imaging, the system will analyze visual cues such as unnatural facial movements and inconsistencies in blood flow and vein patterns derived from hemoglobin concentration changes in facial videos. The overall framework includes data collection, deep learning–based model development, and rigorous system evaluation to effectively distinguish real videos from deepfakes. By enhancing the reliability of media verification, the proposed solution seeks to counter misinformation, protect national security interests, and strengthen trust in digital content.'
     },
     {
-      title: 'Path Planning using Reinforcement Learning',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Muhammad Ali',
-      students: 'Hassan Raza, Amina Malik',
-      description: 'AI-based path planning algorithms that learn optimal trajectories through reinforcement learning in dynamic environments.'
+      title: 'Web App development for Drug-Target Interactions using ML/AI techniques',
+      lab: 'Bioinformatics Lab',
+      supervisor: 'Dr. Abdul Majid',
+      students: 'Mr. Muhammad Asim Nawaz, Mr. Syed Hassan Raza',
+      description: 'This project focuses on leveraging machine learning techniques to predict drug–target interactions, a critical task in pharmacology that supports efficient and cost-effective drug discovery. By collecting and preprocessing a comprehensive dataset of known drug–target interactions, the project aims to develop and evaluate multiple machine learning models capable of accurately predicting interactions between drugs and target proteins. The performance of various algorithms will be systematically assessed using appropriate evaluation metrics, with the best-performing model further optimized and validated. The successful outcome of this work is expected to advance pharmacological research by enabling more reliable identification of potential drug targets and supporting the development of new therapeutic drugs.'
     },
     {
-      title: 'SLAM for Indoor Robot Navigation',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Fahad Hassan',
-      students: 'Khalid Ahmed, Nida Iqbal',
-      description: 'Simultaneous Localization and Mapping for indoor robots using LiDAR, cameras, and sensor fusion for autonomous navigation.'
-    },
-    {
-      title: 'Real-time Obstacle Avoidance Algorithms',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Muhammad Ali',
-      students: 'Adnan Khan, Farida Ahmed',
-      description: 'Fast and efficient collision avoidance methods for autonomous vehicles and robots navigating through dynamic environments.'
-    },
-    {
-      title: 'GPS-based Vehicle Tracking System',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Fahad Hassan',
-      students: 'Rashid Hassan, Lina Khan',
-      description: 'Real-time vehicle tracking and fleet management system using GPS, IoT sensors, and cloud-based data analysis.'
-    },
-    {
-      title: 'Swarm Robotics for Collaborative Navigation',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Muhammad Ali',
-      students: 'Samir Malik, Hana Ahmed',
-      description: 'Coordination algorithms for multiple robots to navigate collaboratively and complete cooperative tasks in complex environments.'
-    },
-    {
-      title: 'Vision-based Lane Detection for Autonomous Vehicles',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Fahad Hassan',
-      students: 'Waseem Khan, Rani Hassan',
-      description: 'Computer vision methods for detecting lane markings and road boundaries to guide autonomous vehicle navigation.'
-    },
-    {
-      title: 'Sensor Fusion for Accurate Localization',
-      lab: 'Autonomous Navigation Lab',
-      supervisor: 'Dr. Muhammad Ali',
-      students: 'Tariq Raza, Sadia Khan',
-      description: 'Integration of multiple sensors (GPS, IMU, LiDAR, cameras) for precise localization and position estimation of mobile robots.'
+      title: 'Development of eyestrike drone for dynamic target engagement',
+      lab: 'Bioinformatics Lab',
+      supervisor: 'Dr. Abdul Majid',
+      students: 'Mr. Abdul Moiz , Mr. Hafiz Shoaib Mehmood',
+      description: 'This project proposes the development of an AI-powered autonomous drone system capable of detecting, identifying, and continuously tracking a specific individual within crowded environments. The system will employ deep neural network–based facial verification for person-specific identification, combined with advanced tracking methods such as DeepSORT and potentially reinforcement learning–based approaches to ensure robust and persistent surveillance. Navigation and control will integrate path planning strategies, including Boustrophedon search, along with potential field–based obstacle avoidance to enable safe operation in dynamic, cluttered settings. System performance will be evaluated in realistic simulation environments such as AirSim or Gazebo, enhanced with custom Unreal Engine crowd scenarios. Overall, the project emphasizes the integration of sensing, planning, and control to advance AI-driven surveillance, autonomous navigation, and human-tracking technologies using state-of-the-art tracking algorithms.'
     },
 
-    // Robotics and Automation Lab
-    {
-      title: 'Collaborative Robot Arm Control',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Fatima Malik',
-      students: 'Usman Tariq, Ayesha Rashid',
-      description: 'Development of human-robot collaborative control systems for safe and efficient robot arm operation in shared workspaces.'
-    },
-    {
-      title: 'Automated Assembly Line Optimization',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Fatima Malik',
-      students: 'Faisal Ahmed, Zainab Khan',
-      description: 'Machine learning approaches for optimizing manufacturing processes, scheduling, and resource allocation in automated assembly lines.'
-    },
-    {
-      title: 'Robotic Manipulation and Grasping',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Karim Hassan',
-      students: 'Bilal Khan, Amera Ahmed',
-      description: 'Research on grasp planning, manipulation strategies, and force control for robots to handle diverse objects and materials.'
-    },
-    {
-      title: 'Humanoid Robot Motion Planning',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Fatima Malik',
-      students: 'Hassan Malik, Noor Khan',
-      description: 'Algorithms for generating smooth and natural motion trajectories for humanoid robots in complex, human-like environments.'
-    },
-    {
-      title: 'Industrial Robot Programming and Control',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Karim Hassan',
-      students: 'Rashid Ali, Hida Ahmed',
-      description: 'Advanced programming frameworks and control systems for industrial robots with real-time feedback and adaptive control.'
-    },
-    {
-      title: 'Machine Vision for Quality Inspection',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Fatima Malik',
-      students: 'Ahmed Hassan, Leila Khan',
-      description: 'Automated quality inspection systems using computer vision and AI for defect detection in manufacturing processes.'
-    },
-    {
-      title: 'Human-Robot Interaction Interface',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Karim Hassan',
-      students: 'Tariq Khan, Samira Ahmed',
-      description: 'Natural language processing and gesture recognition interfaces for intuitive and safe human-robot interaction.'
-    },
-    {
-      title: 'Process Automation using IoT and Robotics',
-      lab: 'Robotics and Automation Lab',
-      supervisor: 'Dr. Fatima Malik',
-      students: 'Adnan Malik, Rana Hassan',
-      description: 'Integration of IoT devices, cloud computing, and robotics for end-to-end process automation in various industries.'
-    },
-
-    // Pattern Recognition Lab
-    {
-      title: 'Handwritten Urdu Text Recognition',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Hassan Raza',
-      students: 'Fahad Mahmood, Hira Ali',
-      description: 'Deep learning models for recognizing and transcribing handwritten Urdu text with high accuracy and robustness.'
-    },
-    {
-      title: 'Speech Recognition for Urdu Language',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Hassan Raza',
-      students: 'Karim Khan, Nadia Ahmed',
-      description: 'Automatic speech recognition system trained on Urdu language data for voice-to-text conversion and voice commands.'
-    },
-    {
-      title: 'Fingerprint Matching and Classification',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Amjad Hassan',
-      students: 'Waseem Ali, Zara Khan',
-      description: 'Biometric fingerprint analysis system for accurate matching, classification, and person identification.'
-    },
-    {
-      title: 'License Plate Recognition System',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Hassan Raza',
-      students: 'Tariq Ahmed, Hana Khan',
-      description: 'Automated vehicle license plate detection and character recognition system for traffic monitoring and toll collection.'
-    },
-    {
-      title: 'Document Image Analysis and Processing',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Amjad Hassan',
-      students: 'Samir Khan, Noor Ahmed',
-      description: 'Techniques for analyzing and extracting information from document images including layout analysis and content extraction.'
-    },
-    {
-      title: 'Iris Recognition for Biometric Authentication',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Hassan Raza',
-      students: 'Bilal Hassan, Amina Khan',
-      description: 'Advanced iris recognition algorithms for highly accurate biometric authentication and security applications.'
-    },
-    {
-      title: 'Scene Text Detection and Recognition',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Amjad Hassan',
-      students: 'Rashid Khan, Salma Ahmed',
-      description: 'Detection and recognition of text in natural scenes including signs, labels, and documents for information extraction.'
-    },
-    {
-      title: 'Digit and Character Recognition using HMM',
-      lab: 'Pattern Recognition Lab',
-      supervisor: 'Dr. Hassan Raza',
-      students: 'Hassan Ahmed, Leila Khan',
-      description: 'Hidden Markov Model-based systems for recognizing handwritten and printed digits and characters with sequence modeling.'
-    },
-
-    // Biomedical Informatics Lab
-    {
-      title: 'AI-Powered Medical Diagnosis System',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Aisha Siddiqui',
-      students: 'Imran Malik, Rabia Shahid',
-      description: 'Intelligent diagnostic system using machine learning to assist physicians in disease detection and patient management.'
-    },
-    {
-      title: 'ECG Analysis for Cardiac Disease Detection',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Aisha Siddiqui',
-      students: 'Ahmed Khan, Fatima Ahmed',
-      description: 'Automated ECG signal analysis for detecting arrhythmias, myocardial infarction, and other cardiac abnormalities.'
-    },
-    {
-      title: 'CT Scan Image Analysis for Tumor Detection',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Sana Hassan',
-      students: 'Khalid Malik, Nida Khan',
-      description: 'AI-based analysis of CT scan images for early tumor detection and cancer diagnosis with high sensitivity and specificity.'
-    },
-    {
-      title: 'Gene Expression Analysis using ML',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Aisha Siddiqui',
-      students: 'Waseem Ahmed, Zainab Khan',
-      description: 'Machine learning models for analyzing gene expression patterns to understand disease mechanisms and identify biomarkers.'
-    },
-    {
-      title: 'Disease Outbreak Prediction Model',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Sana Hassan',
-      students: 'Adnan Khan, Rani Ahmed',
-      description: 'Predictive models using historical and real-time data to forecast disease outbreaks for public health intervention.'
-    },
-    {
-      title: 'Protein Structure Prediction',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Aisha Siddiqui',
-      students: 'Bilal Raza, Hana Khan',
-      description: 'Deep learning approaches for predicting 3D protein structures from amino acid sequences for drug discovery research.'
-    },
-    {
-      title: 'Retinal Image Analysis for Diabetic Retinopathy',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Sana Hassan',
-      students: 'Tariq Hassan, Samira Khan',
-      description: 'Automated detection and grading of diabetic retinopathy from fundus images for early disease intervention.'
-    },
-    {
-      title: 'Health Monitoring System using Wearables',
-      lab: 'Biomedical Informatics Lab',
-      supervisor: 'Dr. Aisha Siddiqui',
-      students: 'Hassan Khan, Leila Ahmed',
-      description: 'IoT-based health monitoring system that collects and analyzes vital signs from wearable devices for patient wellness tracking.'
-    },
-
-    // ML-Based Cyber Security Lab
-    {
-      title: 'Intrusion Detection using Deep Learning',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Usman Shah',
-      students: 'Kashif Raza, Nida Jamil',
-      description: 'Neural network-based intrusion detection system for identifying unauthorized network access and cyber attacks in real-time.'
-    },
-    {
-      title: 'Malware Detection and Classification',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Usman Shah',
-      students: 'Faisal Hassan, Amera Khan',
-      description: 'Machine learning models for detecting and classifying malware variants from binary and behavioral analysis.'
-    },
-    {
-      title: 'Phishing Email Detection System',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Rashid Ahmed',
-      students: 'Ahmed Malik, Zara Hassan',
-      description: 'Email filtering system using NLP and ML to identify phishing attempts and fraudulent messages automatically.'
-    },
-    {
-      title: 'Network Traffic Anomaly Detection',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Usman Shah',
-      students: 'Bilal Khan, Noor Ahmed',
-      description: 'Unsupervised learning techniques to detect abnormal network traffic patterns indicating potential security threats.'
-    },
-    {
-      title: 'DDoS Attack Prediction and Prevention',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Rashid Ahmed',
-      students: 'Tariq Malik, Hida Khan',
-      description: 'Predictive models for forecasting DDoS attacks and adaptive mitigation strategies for network resilience.'
-    },
-    {
-      title: 'Cryptography and Key Management System',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Usman Shah',
-      students: 'Samir Hassan, Samira Ahmed',
-      description: 'Implementation of secure encryption algorithms and AI-enhanced key management for protecting sensitive data.'
-    },
-    {
-      title: 'Zero-Day Exploit Detection',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Rashid Ahmed',
-      students: 'Waseem Raza, Leila Khan',
-      description: 'Advanced anomaly detection techniques for identifying previously unknown zero-day vulnerabilities and exploits.'
-    },
-    {
-      title: 'Behavioral Analysis for Insider Threat Detection',
-      lab: 'ML-Based Cyber Security Lab',
-      supervisor: 'Dr. Usman Shah',
-      students: 'Hassan Ahmed, Rani Khan',
-      description: 'User behavior profiling and anomaly detection to identify suspicious activities and insider threats within organizations.'
-    }
   ];
 
   const filteredProjects = projects.filter(

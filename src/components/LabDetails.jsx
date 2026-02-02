@@ -14,11 +14,10 @@ const LabDetails = () => {
       icon: '🧠',
       description: 'The Deep Learning Lab focuses on developing advanced neural network architectures and training methodologies for solving complex computational problems. Our research spans from foundational deep learning models to cutting-edge applications in computer vision, natural language processing, and reinforcement learning.',
       resources: [
-        'NVIDIA GPU Clusters (A100, RTX 4090)',
-        'TensorFlow & PyTorch Framework',
-        'High-Performance Computing (HPC) Infrastructure',
-        'Data Annotation Tools & Platforms',
-        'Cloud Computing Services (AWS, Google Cloud)'
+        'Single and Multi-GPU Machines',
+        'Desktop Computers',
+        'Scanner and Printer',
+        'LED Display'
       ],
       faculty: [
         { name: 'Dr. Asifullah Khan', title: 'Lab Head', specialty: 'Deep Learning' }
@@ -29,11 +28,15 @@ const LabDetails = () => {
       icon: '👁️',
       description: 'The Computer Vision Lab specializes in developing algorithms and systems for image and video analysis. We work on object detection, semantic segmentation, pose estimation, and 3D reconstruction, with applications in surveillance, autonomous systems, and medical imaging.',
       resources: [
-        'High-Resolution Camera Arrays',
-        'LiDAR & Depth Sensors',
-        'OpenCV & OpenGL Libraries',
-        'GPU-accelerated Processing Units',
-        'Real-time Video Streaming Infrastructure'
+        'Single and Multi-GPU Machines',
+        'Multi-Purpose Robots and Robotic Arms',
+        'UGVs and Drones',
+        'AR & VR Devices',
+        'Edge Computing Devices',
+        'Cameras and Sensors',
+        '3D Printers',
+        'Desktop Computers',
+        'Scanner and Printer'
       ],
       faculty: [
         { name: 'Dr. Naeem Akhtar', title: 'Lab Head', specialty: 'Computer Vision' }
@@ -59,11 +62,10 @@ const LabDetails = () => {
       icon: '⚕️',
       description: 'The Biomedical Informatics Lab applies AI and machine learning to healthcare and medical research. Our work includes disease diagnosis, medical image analysis, genomics analysis, and personalized medicine applications.',
       resources: [
-        'Medical Imaging Equipment (CT, MRI, X-ray)',
-        'Genomic Sequencing Tools',
-        'Electronic Health Records (EHR) Systems',
-        'Bioinformatics Software Suites',
-        'Healthcare Data Analytics Platforms'
+        'Single and Multi-GPU Machines',
+        'Desktop Computers',
+        'Scanner and Printer',
+        'LED Display'
       ],
       faculty: [
         { name: 'Dr. Abdul Majid', title: 'Lab Head', specialty: 'Medical AI & Diagnostics' }
