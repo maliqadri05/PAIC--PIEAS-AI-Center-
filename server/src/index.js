@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import contactRoutes from './routes/contactRoutes.js';
+import { generalLimiter } from './middleware/rateLimiter.js';
 
 dotenv.config();
 
@@ -24,6 +25,9 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
+// Apply a general rate limiter to all requests
+app.use(generalLimiter);
 
 console.log('Setting up routes...');
 

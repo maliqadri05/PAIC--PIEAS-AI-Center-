@@ -1,5 +1,7 @@
 # ✅ PAIC Backend - Implementation Verification Checklist
 
+**Status updates:** `.env` and `server/.env` are now added to `.gitignore`; `.env.example` files exist; a basic CI workflow (`.github/workflows/ci.yml`) was added; server rate limiting is enabled for contact submissions.
+
 Complete this checklist to ensure everything is set up correctly.
 
 ---

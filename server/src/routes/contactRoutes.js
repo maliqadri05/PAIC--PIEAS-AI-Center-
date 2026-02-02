@@ -8,6 +8,7 @@ import {
   validateDateRange,
   handleValidationErrors,
 } from '../middleware/validators.js';
+import { contactLimiter } from '../middleware/rateLimiter.js';
 
 const router = express.Router();
 
@@ -15,8 +16,8 @@ const router = express.Router();
  * PUBLIC ROUTES
  */
 
-// Submit a new contact form (public)
-router.post('/submit', validateContactSubmission, handleValidationErrors, contactController.submitContact);
+// Submit a new contact form (public) - protected by rate limiter
+router.post('/submit', contactLimiter, validateContactSubmission, handleValidationErrors, contactController.submitContact);
 
 /**
  * ADMIN ROUTES

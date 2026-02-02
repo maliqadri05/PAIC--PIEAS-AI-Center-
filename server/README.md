@@ -27,6 +27,7 @@ Complete backend implementation for the PAIC website contact form system with My
 - ✅ Security headers with Helmet
 - ✅ Request logging with Morgan
 - ✅ Error handling and validation
+- ✅ Request throttling for public endpoints (rate limiting on contact submissions)
 
 ## 📦 Prerequisites
 
@@ -50,7 +51,7 @@ Complete backend implementation for the PAIC website contact form system with My
    ```bash
    cp .env.example .env
    ```
-
+> Note: A basic CI workflow was added at `.github/workflows/ci.yml` to run frontend lint and build and to install server dependencies on push/PR. Enable GitHub Actions for automatic checks.
 4. **Configure your database in .env**
    ```env
    PORT=5000
