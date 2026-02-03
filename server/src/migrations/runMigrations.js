@@ -1,39 +1,52 @@
-import { migrations, createDatabaseConnection } from '../config/migrations.js';
-import pool from '../config/database.js';
+import { migrations, createDatabaseConnection, db } from '../config/migrations.js';
 
 const runMigrations = async () => {
   try {
     console.log('🔄 Starting migrations...');
     
-    // First, create database
-    const connection = await createDatabaseConnection();
-    const dbName = process.env.DB_NAME || 'paic_website';
-    
-    console.log(`📦 Creating database: ${dbName}...`);
-    await connection.query(`CREATE DATABASE IF NOT EXISTS ${dbName};`);
-    await connection.end();
-    
-    // Now run migrations using the pool
+    // For SQLite, migrations are simpler
     for (const migration of migrations) {
       if (migration.name === '001_create_database') {
-        console.log(`✅ ${migration.name} - Skipped (already handled)`);
+        console.log(`✅ ${migration.name} - Configuring SQLite...`);
+        db.exec(migration.sql);
         continue;
       }
-      
+
+      if (migration.name === '003_create_contacts_indexes') {
+        console.log(`⏳ Running: ${migration.name}...`);
+        try {
+          const statements = migration.sql.split(';').filter((s) => s.trim());
+          for (const stmt of statements) {
+            if (stmt.trim()) {
+              db.exec(stmt);
+            }
+          }
+          console.log(`✅ ${migration.name} - Complete`);
+        } catch (error) {
+          if (error.message.includes('already exists')) {
+            console.log(`✅ ${migration.name} - Skipped (already exists)`);
+          } else {
+            throw error;
+          }
+        }
+        continue;
+      }
+
       console.log(`⏳ Running: ${migration.name}...`);
       try {
-        await pool.query(migration.sql);
+        db.exec(migration.sql);
         console.log(`✅ ${migration.name} - Complete`);
       } catch (error) {
-        if (error.code === 'ER_TABLE_EXISTS_ERROR' || error.message.includes('already exists')) {
+        if (error.message.includes('already exists')) {
           console.log(`✅ ${migration.name} - Skipped (already exists)`);
         } else {
           throw error;
         }
       }
     }
-    
+
     console.log('\n✨ All migrations completed successfully!');
+    console.log('📁 Database file: paic_website.db');
     process.exit(0);
   } catch (error) {
     console.error('❌ Migration failed:', error.message);

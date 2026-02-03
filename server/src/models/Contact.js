@@ -1,15 +1,18 @@
-// In-memory storage
-const memoryStore = {
-  contacts: [],
-  nextId: 1,
-};
+import { db } from '../config/migrations.js';
 
 class Contact {
   static async create(data) {
     const { name, email, subject, message } = data;
-    
-    const contact = {
-      id: memoryStore.nextId++,
+
+    const stmt = db.prepare(`
+      INSERT INTO contacts (name, email, subject, message, status, created_at, updated_at)
+      VALUES (?, ?, ?, ?, 'new', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)
+    `);
+
+    const result = stmt.run(name, email, subject, message);
+
+    return {
+      id: result.lastInsertRowid,
       name,
       email,
       subject,
@@ -18,28 +21,34 @@ class Contact {
       created_at: new Date().toISOString(),
       updated_at: new Date().toISOString(),
     };
-    
-    memoryStore.contacts.push(contact);
-    return contact;
   }
 
   static async findAll(options = {}) {
-    const { status, limit = 100, offset = 0 } = options;
-    let result = memoryStore.contacts;
-    
+    const { status, limit = 100, offset = 0, sortBy = 'created_at', order = 'DESC' } = options;
+
+    let query = 'SELECT * FROM contacts WHERE deleted_at IS NULL';
+    const params = [];
+
     if (status) {
-      result = result.filter(c => c.status === status);
+      query += ' AND status = ?';
+      params.push(status);
     }
-    
-    return result.slice(offset, offset + limit);
+
+    query += ` ORDER BY ${sortBy} ${order} LIMIT ? OFFSET ?`;
+    params.push(limit, offset);
+
+    const stmt = db.prepare(query);
+    return stmt.all(...params);
   }
 
   static async findById(id) {
-    return memoryStore.contacts.find(c => c.id === Number(id)) || null;
+    const stmt = db.prepare('SELECT * FROM contacts WHERE id = ? AND deleted_at IS NULL');
+    return stmt.get(id) || null;
   }
 
   static async findByEmail(email) {
-    return memoryStore.contacts.filter(c => c.email === email);
+    const stmt = db.prepare('SELECT * FROM contacts WHERE email = ? AND deleted_at IS NULL');
+    return stmt.all(email);
   }
 
   static async updateStatus(id, status) {
@@ -47,62 +56,138 @@ class Contact {
     if (!validStatuses.includes(status)) {
       throw new Error(`Invalid status: ${status}`);
     }
-    
-    const contact = memoryStore.contacts.find(c => c.id === Number(id));
+
+    const contact = await this.findById(id);
     if (!contact) throw new Error('Contact not found');
-    
-    contact.status = status;
-    contact.updated_at = new Date().toISOString();
-    return contact;
+
+    const stmt = db.prepare(`
+      UPDATE contacts 
+      SET status = ?, updated_at = CURRENT_TIMESTAMP
+      WHERE id = ?
+    `);
+
+    stmt.run(status, id);
+
+    return {
+      ...contact,
+      status,
+      updated_at: new Date().toISOString(),
+    };
   }
 
   static async update(id, data) {
-    const contact = memoryStore.contacts.find(c => c.id === Number(id));
+    const contact = await this.findById(id);
     if (!contact) throw new Error('Contact not found');
-    
-    Object.assign(contact, { ...data, updated_at: new Date().toISOString() });
-    return contact;
+
+    const updates = [];
+    const values = [];
+
+    if (data.name !== undefined) {
+      updates.push('name = ?');
+      values.push(data.name);
+    }
+    if (data.email !== undefined) {
+      updates.push('email = ?');
+      values.push(data.email);
+    }
+    if (data.subject !== undefined) {
+      updates.push('subject = ?');
+      values.push(data.subject);
+    }
+    if (data.message !== undefined) {
+      updates.push('message = ?');
+      values.push(data.message);
+    }
+    if (data.status !== undefined) {
+      updates.push('status = ?');
+      values.push(data.status);
+    }
+
+    if (updates.length === 0) {
+      return contact;
+    }
+
+    updates.push('updated_at = CURRENT_TIMESTAMP');
+    values.push(id);
+
+    const query = `UPDATE contacts SET ${updates.join(', ')} WHERE id = ?`;
+    const stmt = db.prepare(query);
+    stmt.run(...values);
+
+    return {
+      ...contact,
+      ...data,
+      updated_at: new Date().toISOString(),
+    };
   }
 
   static async delete(id) {
-    const index = memoryStore.contacts.findIndex(c => c.id === Number(id));
-    if (index === -1) throw new Error('Contact not found');
-    memoryStore.contacts.splice(index, 1);
+    const contact = await this.findById(id);
+    if (!contact) throw new Error('Contact not found');
+
+    const stmt = db.prepare('UPDATE contacts SET deleted_at = CURRENT_TIMESTAMP WHERE id = ?');
+    stmt.run(id);
+
     return true;
   }
 
   static async hardDelete(id) {
-    return this.delete(id);
+    const contact = await this.findById(id);
+    if (!contact) throw new Error('Contact not found');
+
+    const stmt = db.prepare('DELETE FROM contacts WHERE id = ?');
+    stmt.run(id);
+
+    return true;
   }
 
   static async getStats() {
-    const total = memoryStore.contacts.length;
-    return {
-      total,
-      new_count: memoryStore.contacts.filter(c => c.status === 'new').length,
-      read_count: memoryStore.contacts.filter(c => c.status === 'read').length,
-      responded_count: memoryStore.contacts.filter(c => c.status === 'responded').length,
-      archived_count: memoryStore.contacts.filter(c => c.status === 'archived').length,
-      days_with_contacts: new Set(memoryStore.contacts.map(c => c.created_at.split('T')[0])).size,
-    };
+    const totalStmt = db.prepare('SELECT COUNT(*) as count FROM contacts WHERE deleted_at IS NULL');
+    const { count: total } = totalStmt.get();
+
+    const statuses = ['new', 'read', 'responded', 'archived'];
+    const stats = { total, days_with_contacts: 0 };
+
+    for (const status of statuses) {
+      const stmt = db.prepare(`SELECT COUNT(*) as count FROM contacts WHERE status = ? AND deleted_at IS NULL`);
+      const { count } = stmt.get(status);
+      stats[`${status}_count`] = count;
+    }
+
+    const daysStmt = db.prepare(`
+      SELECT COUNT(DISTINCT DATE(created_at)) as count FROM contacts WHERE deleted_at IS NULL
+    `);
+    const { count: daysCount } = daysStmt.get();
+    stats.days_with_contacts = daysCount;
+
+    return stats;
   }
 
   static async search(searchTerm, options = {}) {
     const { limit = 50, offset = 0 } = options;
-    const results = memoryStore.contacts.filter(c =>
-      c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.subject.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      c.message.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    return results.slice(offset, offset + limit);
+    const query = `
+      SELECT * FROM contacts 
+      WHERE deleted_at IS NULL AND (
+        name LIKE ? OR 
+        email LIKE ? OR 
+        subject LIKE ? OR 
+        message LIKE ?
+      )
+      LIMIT ? OFFSET ?
+    `;
+
+    const searchPattern = `%${searchTerm}%`;
+    const stmt = db.prepare(query);
+    return stmt.all(searchPattern, searchPattern, searchPattern, searchPattern, limit, offset);
   }
 
   static async findByDateRange(startDate, endDate) {
-    return memoryStore.contacts.filter(c => {
-      const date = c.created_at.split('T')[0];
-      return date >= startDate && date <= endDate;
-    });
+    const stmt = db.prepare(`
+      SELECT * FROM contacts 
+      WHERE deleted_at IS NULL AND DATE(created_at) BETWEEN ? AND ?
+      ORDER BY created_at DESC
+    `);
+    return stmt.all(startDate, endDate);
   }
 }
 
